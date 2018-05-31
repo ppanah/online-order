@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body class="container">
+  <div id="header">
+    <div class="header_menu">
+      <nav class="wrapper">
+        <div class="logo">
+          <img src="images/logo.png"/>
+        </div>
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" class="label-toggle"></label>
+        <ul>
+          <li><a href="#">Edibles</a></li>
+          <li><a href="#">Merch</a></li>
+          <li><a href="#">Reviews</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header_contact">
+      <span class="sm-hidden">1-800-263-1775</span>
+      <span class="fa-stack has-badge" data-count="2">
+        <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+        <i style="" class="fa fa-shopping-cart fa-stack-2x red-cart"></i>
+      </span>
+    </div>
+  </div>
+
+  <div class="image_gallery">
+    <div class="thumbnails_container">
+      <ul id="thumbnails_list">
+        <li><img id="1" class="thumb normal" src="images/image_gallery_1.png" alt="image1"/></li>
+        <li><img id="2" class="thumb normal" src="images/image_gallery_2.png" alt="image2"/></li>
+        <li><img id="3" class="thumb normal" src="images/image_gallery_1.png" alt="image3"/></li>
+      </ul>
+    </div>
+    <div class="preview_container">
+      <img id="0" class="preview" src="" alt="preview" />
+    </div>
+  </div>
+  <div class="order_form">
+    <div class="info">
+      <h3>Brooklyn Classic</h3>
+      <p>$99 USD</p>
+      <p>Because you deserve the most sizzling classic of them all. Nothin mo nothin less.</p>
+    </div>
+    <div class="qty-changer">
+      <p>Quantity</p>
+      <button class="qty-change" onclick="deleteQty()">-</button>
+      <input type="text" id="quantity" name="quantity" value="1" min="1" max="100">
+      <button class="qty-change" onclick="addQty()">+</button>
+    </div>
+    <div class="pay_btn">
+      <button type="button" onClick="pay()">ONWARDS WITH MY PIZZA</button>
+      <p>30 day money back guarantee</p>
+    </div>
+  </div>
+  <div class="message">
+    <h2>We completely re-engineered the pizza just for you.<br/> So you can eat all day.</h2>
+  </div>
+
+  <div class="slider">
+    <ul id="sliderbox">
+      <li class="card">
+        <img src="images/slider_img_1.jpg">
+        <div class="card_content">
+          <div class="avatar">
+            <img src="images/avatar-1.jpg" alt="Avatar"/>
+          </div>
+          <div class="avatar_info">
+            <h4><b>Jodizle</b></h4>
+            <p class="no_top_margin">@theSizzle</p>
+          </div>
+        </div>
+      </li>
+      <li class="card">
+        <img src="images/slider_img_2.jpg">
+        <div class="card_content">
+          <div class="avatar">
+            <img src="images/avatar-2.jpg" alt="Avatar"/>
+          </div>
+          <div class="avatar_info">
+            <h4><b>Jodizle</b></h4>
+            <p class="no_top_margin">@theSizzle</p>
+          </div>
+        </div>
+      </li>
+      <li class="card">
+        <img src="images/slider_img_3.jpg">
+        <div class="card_content">
+          <div class="avatar">
+            <img src="images/avatar-3.jpg" alt="Avatar"/>
+          </div>
+          <div class="avatar_info">
+            <h4><b>Jodizle</b></h4>
+            <p class="no_top_margin">@theSizzle</p>
+          </div>
+        </div>
+      </li>
+      <li class="card">
+        <img src="images/slider_img_4.jpg">
+        <div class="card_content">
+          <div class="avatar">
+            <img src="images/avatar-4.jpg" alt="Avatar"/>
+          </div>
+          <div class="avatar_info">
+            <h4><b>Jodizle</b></h4>
+            <p class="no_top_margin">@theSizzle</p>
+          </div>
+        </div>
+      </li>
+      <li class="card">
+        <img src="images/slider_img_5.jpg">
+        <div class="card_content">
+          <div class="avatar">
+            <img src="images/avatar-5.jpg" alt="Avatar"/>
+          </div>
+          <div class="avatar_info">
+            <h4><b>Jodizle</b></h4>
+            <p class="no_top_margin">@theSizzle</p>
+          </div>
+        </div>
+      </li>
+      <li class="card">
+        <img src="images/slider_img_1.jpg">
+        <div class="card_content">
+          <div class="avatar">
+            <img src="images/avatar-1.jpg" alt="Avatar"/>
+          </div>
+          <div class="avatar_info">
+            <h4><b>Jodizle</b></h4>
+            <p class="no_top_margin">@theSizzle</p>
+          </div>
+        </div>
+      </li>
+      <li class="card">
+        <img src="images/slider_img_2.jpg">
+        <div class="card_content">
+          <div class="avatar">
+            <img src="images/avatar-2.jpg" alt="Avatar"/>
+          </div>
+          <div class="avatar_info">
+            <h4><b>Jodizle</b></h4>
+            <p class="no_top_margin">@theSizzle</p>
+          </div>
+        </div>
+      </li>
+      <li class="card">
+        <img src="images/slider_img_3.jpg">
+        <div class="card_content">
+          <div class="avatar">
+            <img src="images/avatar-3.jpg" alt="Avatar"/>
+          </div>
+          <div class="avatar_info">
+            <h4><b>Jodizle</b></h4>
+            <p class="no_top_margin">@theSizzle</p>
+          </div>
+        </div>
+      </li>
+      <li class="card">
+        <img src="images/slider_img_4.jpg">
+        <div class="card_content">
+          <div class="avatar">
+            <img src="images/avatar-4.jpg" alt="Avatar"/>
+          </div>
+          <div class="avatar_info">
+            <h4><b>Jodizle</b></h4>
+            <p class="no_top_margin">@theSizzle</p>
+          </div>
+        </div>
+      </li>
+    </ul>
+
+  </div>
+  <div class="content">
+    <div class="content_bg_container">
+      <div class="pizza_text">
+        <h2>Pizza made just for you.By the slice.</h2>
+        <p>Because you deserve more than pizza made for no one in particular.</p>
+      </div>
+      <img src="images/content_guy_img.jpg" class="guy_img"/>
+      <img src="images/content_img_cat.jpg" class="cat_img"/>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
